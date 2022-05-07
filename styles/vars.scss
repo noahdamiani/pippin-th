@@ -1,0 +1,45 @@
+:root {
+  --theme-black: #000;
+  --theme-red: #ff0000;
+  --theme-blue: #428bca;
+  --theme-green: #45b25d;
+  --theme-gray: rgba(0, 0, 0, 0.5);
+  --theme-border-accent: #bbb;
+  --theme-drop-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+}
+
+.bg-green {
+  background: var(--theme-green);
+}
+
+.bg-blue {
+  background: var(--theme-blue);
+}
+
+.text-red {
+  color: var(--theme-red);
+}
+
+.text-black {
+  color: var(--theme-black);
+}
+
+.text-gray {
+  color: var(--theme-gray);
+}
+
+.text-weight-700 {
+  font-weight: 700;
+}
+
+.text-weight-900 {
+  font-weight: 900;
+}
+
+.text-lg {
+  font-size: 23px;
+}
+
+.text-sm {
+  font-size: 12px;
+}
