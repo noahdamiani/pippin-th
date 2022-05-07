@@ -20,6 +20,9 @@
     "incremental": true,
     "baseUrl": ".",
     "paths": {
+      "schema/*": [
+        "./schema/*"
+      ],
       "components/*": [
         "./components/*"
       ],
