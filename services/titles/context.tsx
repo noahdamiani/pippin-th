@@ -74,13 +74,17 @@ export const TitleProvider: React.FC<{ children: React.ReactNode }> = ({
   const sortEntries = useCallback(
     (value: string) => {
       const [key, type] = value.split('::');
-      // "Sort by" was pressed, revert to initial sort.
-      if (key === '') return initialTitles;
-      const sortingHandler = createSort(key, type);
-      setSelectedSort(value);
-      setTitles([...titles].sort(sortingHandler));
+
+      // If not the default Sort By option, sort the list.
+      if (key !== '') {
+        const sortingHandler = createSort(key, type);
+        setSelectedSort(value);
+        setTitles([...titles].sort(sortingHandler));
+      } else {
+        setTitles(initialTitles);
+      }
     },
-    [titles]
+    [titles, initialTitles]
   );
 
   // Initial fetch of the titles and add the initial index for drag and drop.
