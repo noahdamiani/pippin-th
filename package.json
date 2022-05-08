@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "yarn test:ci && yarn e2e:headless && next build",
+    "build": "next build && yarn test:ci && yarn e2e:headless",
     "start": "next start",
     "lint": "next lint",
     "cypress": "cypress open",
