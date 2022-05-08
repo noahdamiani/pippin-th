@@ -24,7 +24,9 @@ import { createSort } from './units/sort';
 import { createSwap } from './units/swap';
 import { createUpdateStatus } from './units/updateStatus';
 
-const Noop = () => {};
+const Noop = () => {
+  return;
+};
 
 // Outlines the ContextType
 type Context = {
