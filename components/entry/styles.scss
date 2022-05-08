@@ -1,0 +1,59 @@
+.entry {
+  background-color: var(--theme-paper-white);
+  border: 1px solid var(--theme-border-accent);
+  box-shadow: var(--theme-drop-shadow);
+  border-radius: var(--theme-card-radius);
+  line-height: 14px;
+
+  .header {
+    height: 33px;
+    padding-bottom: 6px;
+    display: grid;
+    grid-template-columns: 50fr 50fr;
+
+    .order-number {
+      padding-top: 16px;
+      padding-left: 19px;
+    }
+
+    .search-date {
+      padding-top: 13px;
+      padding-right: 21px;
+      text-align: right;
+    }
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+    // Calculated using the aspect ratio provided via figma.
+    padding-bottom: 42.37804878048781%;
+
+    img {
+      object-position: 0 -57px;
+    }
+  }
+
+  .address {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .status-button {
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: var(--theme-fs-primary);
+    color: var(--theme-white);
+    border-bottom-left-radius: var(--theme-card-radius);
+    border-bottom-right-radius: var(--theme-card-radius);
+  }
+}
+
+.entry-sort {
+  padding: 10px 0;
+  border: none;
+  border-bottom: 1px solid var(--theme-border-accent);
+}

@@ -1,10 +1,21 @@
-import type { NextPage } from "next";
+import type { NextPage } from 'next';
+import { TitleProvider } from 'services/titles/context';
+import { DndProvider } from 'react-dnd';
+import { HTML5Backend } from 'react-dnd-html5-backend';
+import { EntryGrid } from 'components/grid';
+import { EntrySort } from 'components/entry/sort';
+import { sortEntriesOptions } from 'schema/sort';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <h1 className="text-red text-weight-700">Test</h1>
-    </div>
+    <main>
+      <DndProvider backend={HTML5Backend}>
+        <TitleProvider>
+          <EntrySort options={sortEntriesOptions} />
+          <EntryGrid />
+        </TitleProvider>
+      </DndProvider>
+    </main>
   );
 };
 

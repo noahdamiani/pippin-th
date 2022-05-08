@@ -1,12 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap");
 @import "./vars.scss";
-@import "./home.scss";
+@import "../components/grid/styles.scss";
+@import "../components/entry/styles.scss";
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: "Roboto";
 }
 
 a {

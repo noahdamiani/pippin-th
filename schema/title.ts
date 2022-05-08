@@ -5,4 +5,11 @@ export interface Title {
   address: string;
   image: string;
   status: string;
+  [key: string]: string | number;
 }
+
+export type SortOpt = {
+  key: string;
+  label: string;
+  type: 'ASC' | 'DESC';
+};

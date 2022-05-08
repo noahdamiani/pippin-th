@@ -1,0 +1,33 @@
+$gridWidth: 1011px;
+$mobileBreak: 640px;
+
+main {
+  max-width: $gridWidth;
+  margin: 0 auto;
+  padding-top: 20px;
+
+  @media (max-width: $gridWidth) {
+    padding: 20px;
+  }
+
+  @media (max-width: $mobileBreak) {
+    padding: 10px;
+  }
+}
+
+.grid {
+  padding-top: 20px;
+  display: grid;
+  grid-template-columns: 33fr 33fr 33fr;
+  column-gap: 10px;
+
+  @media (max-width: $gridWidth) {
+    grid-template-columns: 50fr 50fr;
+    row-gap: 10px;
+  }
+
+  @media (max-width: $mobileBreak) {
+    grid-template-columns: 100fr;
+    column-gap: 0;
+  }
+}

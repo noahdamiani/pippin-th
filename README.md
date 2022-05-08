@@ -8,14 +8,35 @@ https://www.figma.com/community/file/1080613843279208341/Pippin-UI-Development-T
 
 ## Running the project
 
+First run `yarn` to install the codebase. Run `npm install --global yarn` if yarn is not installed.
+
+To run in development mode:
+
 ```bash
-npm run dev
-# or
 yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The application should be running at http://localhost:3000
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/titles](http://localhost:3000/api/titles). This endpoint can be edited in `pages/api/titles.ts`.
+## Run test suites
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+This project contains E2E tests built with cypress, as well as unit tests using Jest.
+
+If you want to see the entirety of test results, just run `yarn build`,
+which will run both Jest and Cypress in CI mode before building the codebase.
+
+To check test suites individually:
+
+```bash
+    # E2E tests, in your console:
+    yarn e2e:headless
+
+    # E2E tests with browser explorer:
+    yarn e2e
+
+    # Jest unit tests:
+    yarn test
+
+    # Jest unit tests, CI:
+    yarn test:ci
+```
